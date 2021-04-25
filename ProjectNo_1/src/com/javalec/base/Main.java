@@ -235,6 +235,46 @@ public class Main {
 			pwSearchPanel = new JPanel();
 			pwSearchPanel.setBounds(0, 0, 400, 572);
 			pwSearchPanel.setLayout(null);
+			
+			JLabel lblNewLabel_pwtitle = new JLabel("제목(미정)");
+			lblNewLabel_pwtitle.setBounds(134, 10, 124, 75);
+			lblNewLabel_pwtitle.setHorizontalAlignment(SwingConstants.CENTER);
+			lblNewLabel_pwtitle.setFont(new Font("Dialog", Font.PLAIN, 30));
+			pwSearchPanel.add(lblNewLabel_pwtitle);
+			
+			JTextField tfpwSearchId = new JTextField();
+			tfpwSearchId.setBounds(56, 275, 280, 43);
+			tfpwSearchId.setText("Id");
+			tfpwSearchId.setForeground(Color.LIGHT_GRAY);
+			tfpwSearchId.setColumns(10);
+			pwSearchPanel.add(tfpwSearchId);
+			
+			JTextField tfpwSearchEmail = new JTextField();
+			tfpwSearchEmail.setBounds(56, 371, 280, 43);
+			tfpwSearchEmail.setText("이메일");
+			tfpwSearchEmail.setForeground(Color.LIGHT_GRAY);
+			tfpwSearchEmail.setColumns(10);
+			pwSearchPanel.add(tfpwSearchEmail);
+			
+			JLabel lblNewLabel_pwSearch = new JLabel("PW 찾기");
+			lblNewLabel_pwSearch.setBounds(134, 108, 124, 62);
+			lblNewLabel_pwSearch.setHorizontalAlignment(SwingConstants.CENTER);
+			lblNewLabel_pwSearch.setFont(new Font("Dialog", Font.PLAIN, 30));
+			pwSearchPanel.add(lblNewLabel_pwSearch);
+			
+			JLabel lblNewLabel_pwID = new JLabel("Id를 입력하세요");
+			lblNewLabel_pwID.setFont(new Font("굴림", Font.PLAIN, 15));
+			lblNewLabel_pwID.setBounds(54, 219, 142, 33);
+			pwSearchPanel.add(lblNewLabel_pwID);
+			
+			JLabel lblNewLabel_6_pwEmail = new JLabel("이메일을 입력하세요");
+			lblNewLabel_6_pwEmail.setFont(new Font("굴림", Font.PLAIN, 15));
+			lblNewLabel_6_pwEmail.setBounds(54, 328, 142, 33);
+			pwSearchPanel.add(lblNewLabel_6_pwEmail);
+			
+			JButton btnpwSearch = new JButton("비밀번호 찾기");
+			btnpwSearch.setBounds(134, 504, 111, 33);
+			pwSearchPanel.add(btnpwSearch);
 		}
 		return pwSearchPanel;
 	}
