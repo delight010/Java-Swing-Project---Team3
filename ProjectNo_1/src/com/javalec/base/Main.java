@@ -31,6 +31,9 @@ public class Main {
 	private JPanel pwSearchPanel;
 	private JPanel userPanel;
 	private JPanel adminPanel;
+	private JTextField tfidSearchName;
+	private JTextField tfIdSearchEmail;
+
 
 	/**
 	 * Launch the application.
@@ -63,11 +66,12 @@ public class Main {
 		frame.setBounds(100, 100, 400, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		frame.getContentPane().add(getLoginPanel());
 		frame.getContentPane().add(getIdSearchPanel());
+		frame.getContentPane().add(getLoginPanel());
 		frame.getContentPane().add(getPwSearchPanel());
 		frame.getContentPane().add(getUserPanel());
 		frame.getContentPane().add(getAdminPanel());
+		
 	}
 	private JLabel getLblNewLabel() {
 		if (lblNewLabel == null) {
@@ -183,6 +187,46 @@ public class Main {
 			idSearchPanel = new JPanel();
 			idSearchPanel.setBounds(0, 0, 400, 572);
 			idSearchPanel.setLayout(null);
+			
+			JLabel lblNewLabel_5 = new JLabel("제목(미정)");
+			lblNewLabel_5.setBounds(134, 10, 124, 75);
+			lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
+			lblNewLabel_5.setFont(new Font("Dialog", Font.PLAIN, 30));
+			idSearchPanel.add(lblNewLabel_5);
+			
+			tfidSearchName = new JTextField();
+			tfidSearchName.setBounds(56, 275, 280, 43);
+			tfidSearchName.setText("이름");
+			tfidSearchName.setForeground(Color.LIGHT_GRAY);
+			tfidSearchName.setColumns(10);
+			idSearchPanel.add(tfidSearchName);
+			
+			tfIdSearchEmail = new JTextField();
+			tfIdSearchEmail.setBounds(56, 371, 280, 43);
+			tfIdSearchEmail.setText("이메일");
+			tfIdSearchEmail.setForeground(Color.LIGHT_GRAY);
+			tfIdSearchEmail.setColumns(10);
+			idSearchPanel.add(tfIdSearchEmail);
+			
+			JLabel lblNewLabel_1_1_1 = new JLabel("ID 찾기");
+			lblNewLabel_1_1_1.setBounds(134, 108, 111, 62);
+			lblNewLabel_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+			lblNewLabel_1_1_1.setFont(new Font("Dialog", Font.PLAIN, 30));
+			idSearchPanel.add(lblNewLabel_1_1_1);
+			
+			JLabel lblNewLabel_6 = new JLabel("이름을 입력하세요");
+			lblNewLabel_6.setFont(new Font("굴림", Font.PLAIN, 15));
+			lblNewLabel_6.setBounds(54, 219, 142, 33);
+			idSearchPanel.add(lblNewLabel_6);
+			
+			JLabel lblNewLabel_6_1 = new JLabel("이메일을 입력하세요");
+			lblNewLabel_6_1.setFont(new Font("굴림", Font.PLAIN, 15));
+			lblNewLabel_6_1.setBounds(54, 328, 142, 33);
+			idSearchPanel.add(lblNewLabel_6_1);
+			
+			JButton btnidSearch = new JButton("아이디 찾기");
+			btnidSearch.setBounds(134, 504, 111, 33);
+			idSearchPanel.add(btnidSearch);
 		}
 		return idSearchPanel;
 	}
